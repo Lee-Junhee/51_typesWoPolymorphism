@@ -6,8 +6,8 @@
 public class List_inArraySlots {
 
     private int[] intElements;
-    private int[] doubleElements;
-    private int[] stringElements;
+    private double[] doubleElements;
+    private String[] stringElements;
     private int filledElements; // the number of elements in this list
     
     /* type identifier for each element
@@ -18,21 +18,26 @@ public class List_inArraySlots {
             replace these "magic numbers" with an "enumerated type".
      */
     private int[] typeOfElements;
-
     private static final int INITIAL_CAPACITY = 10;
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
+        intElements = new int[INITIAL_CAPACITY];
+	doubleElements = new double[INITIAL_CAPACITY];
+	stringElements = new String[INITIAL_CAPACITY];
+	typeOfElements = new int[INITIAL_CAPACITY];
+	//filledElements is already set to 0, default value
     }
 
 
     /**
       @return the number of elements in this list
      */
-    // public int size() {
-    // }
+    public int size() {
+	return filledElements;
+    }
 
 
      /**
