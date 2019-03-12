@@ -19,6 +19,9 @@ public class List_inArraySlots {
      */
     private int[] typeOfElements;
     private static final int INITIAL_CAPACITY = 10;
+    private final int INT = 0;
+    private final int DOUBLE = 1;
+    private final int STRING = 2;
 
     /**
       Construct an empty list with a small initial capacity.
